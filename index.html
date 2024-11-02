@@ -6,29 +6,19 @@
     <title>Love Match</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="mx-[30%]">
-    <main class="text-center grid gap-5">
-        <h1 class="text-6xl text-red-500 font-extrabold">CupidMatch</h1>
-        <p>You two share a connection that feels almost cosmic. The spark between you lights up like stars in a midnight sky, as if the universe itself conspired to bring you together. Your personalities blend harmoniously, creating a bond that could stand the test of time. Cherish each moment, and let your love story shine as brightly as it began.</p>
+<body class="flex items-center justify-center min-h-screen bg-gray-100 text-center">
+    <main class="bg-white p-6 sm:p-10 rounded shadow-lg max-w-md w-full">
+        <h1 class="text-4xl sm:text-6xl text-red-500 font-extrabold mb-4">CupidMatch</h1>
+        <p class="mb-6 text-sm sm:text-base">You two share a connection that feels almost cosmic.<br> The spark between you lights up like stars in a midnight sky, as if the universe itself conspired to bring you together.<br> Your personalities blend harmoniously, creating a bond that could stand the test of time. Cherish each moment, and let your love story shine as brightly as it began.</p>
+
+        <div id="result" class="text-3xl sm:text-4xl text-red-500 font-semibold mt-4 mb-6"></div>
 
         <form action="calculate-love" method="post" onsubmit="loveCalculator(event)">
+            <input class="border border-red-300 rounded p-2 w-full mb-4" type="text" id="name1" name="name1" placeholder="Enter the first name" required>
+            <input class="border border-red-300 rounded p-2 w-full mb-4" type="text" id="name2" name="name2" placeholder="Enter the second name" required>
             
-            <!-- Label and input for first name -->
-            <input class="border border-red-300 rounded p-2" type="text" id="name1" name="name1" placeholder="Enter the name" required>
-
-            <br><br>
-
-            <!-- Label and input for second name -->
-            <input class="border border-red-300 rounded p-2" type="text" id="name2" name="name2" placeholder="Enter the name" required>
-
-            <br><br>
-            
-            <!-- Submit button to calculate the result -->
-            <button type="submit" class="bg-red-300 rounded w-[100px]">Calculate Love Match</button>
+            <button type="submit" class="bg-red-300 rounded w-full py-2">Calculate Love Match</button>
         </form>
-
-        <div id="result" class="text-4xl text-red-500 font-semibold mt-5"></div>
-
 
     </main>
 
